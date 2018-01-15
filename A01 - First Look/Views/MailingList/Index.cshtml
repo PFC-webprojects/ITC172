@@ -1,0 +1,23 @@
+﻿@model IEnumerable<A01___First_Look.Models.MailingList>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">  <!--  table is a Bootstrap CSS class  -->
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.DisplayNameFor(model => model.EMail)</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(model => item.FirstName)</td>
+        <td>@Html.DisplayFor(model => item.LastName)</td>
+        <td>@Html.DisplayFor(model => item.EMail)</td>
+    </tr>
+    }
+
+</table>
